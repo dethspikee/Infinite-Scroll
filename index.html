@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scroll</title>
+    <style>
+        h1 {
+            margin-top: 5%;
+            text-align: center;
+            font-family: Verdana, Arial, Geneva, Tahoma, sans-serif;
+        }
+        .container {
+            width: 25%;
+            margin: 2.5% auto;
+            height: 300px;
+            border: 1px solid black;
+            overflow: scroll;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            background-color: bisque;
+            text-align: center;
+            padding: 0.5em;
+            width: 90%;
+            border-radius: 6px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #preloader {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Infinite Scroll</h1>
+    <div class="container" id="container">
+        <p>Scroll</p>
+        <p>Scroll</p>
+        <p>Scroll</p>
+        <p>Scroll</p>
+        <p>Scroll</p>
+        <p>Scroll</p>
+        <p>Scroll</p>
+        <p>Scroll</p>
+        <img src="./30.gif" id="preloader">
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
