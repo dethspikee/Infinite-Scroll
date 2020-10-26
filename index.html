@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infinite Scroll</title>
     <style>
+        @keyframes hide {
+            0% {
+                opacity: 1;
+            }
+
+            75% {
+                min-height: 0px;
+                border: none;
+                margin: 0px;
+                padding: 0;
+                line-height: 0px;
+                font-size: 0px;
+                border-radius: 0px;
+                overflow: hidden;
+                opacity: 0.1;
+            }
+
+            100% {
+                opacity: 0;
+                min-height: 0px;
+                border: none;
+                margin: 0px;
+                padding: 0;
+                line-height: 0px;
+                font-size: 0px;
+                border-radius: 0px;
+                overflow: hidden;
+            }
+        }
+
         h1 {
             margin-top: 5%;
             text-align: center;
             font-family: Verdana, Arial, Geneva, Tahoma, sans-serif;
         }
+
         .container {
             width: 25%;
             margin: 2.5% auto;
@@ -22,13 +54,19 @@
         }
 
         p {
+            min-height: 18px;
             background-color: bisque;
+            display: block;
             text-align: center;
             padding: 0.5em;
             width: 90%;
             border-radius: 6px;
             margin: 5px;
             cursor: pointer;
+            animation-name: hide;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
         }
 
         #preloader {
@@ -36,19 +74,32 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Infinite Scroll</h1>
     <div class="container" id="container">
-        <p>Scroll</p>
-        <p>Scroll</p>
-        <p>Scroll</p>
-        <p>Scroll</p>
-        <p>Scroll</p>
-        <p>Scroll</p>
-        <p>Scroll</p>
-        <p>Scroll</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
+        <p>Click me</p>
         <img src="./30.gif" id="preloader">
     </div>
     <script src="./main.js"></script>
 </body>
+
 </html>

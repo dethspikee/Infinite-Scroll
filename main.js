@@ -6,7 +6,11 @@ const paragraphs = document.querySelectorAll('p');
 const enableInfiniteScroll = () => {
 
     const removeItem = (event) => {
-        console.log(event.currentTarget);
+        event.currentTarget.style.animationPlayState = 'running';
+        event.currentTarget.addEventListener('animationend', event => {
+            console.log('ended');
+            event.currentTarget.remove();
+        })
     };
 
     paragraphs.forEach(paragraph => paragraph.addEventListener('click', removeItem));
@@ -30,11 +34,6 @@ const enableInfiniteScroll = () => {
         }
     })
 };
-
-
-
-
-
 
 
 enableInfiniteScroll();
