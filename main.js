@@ -1,10 +1,9 @@
-const container = document.getElementById('container');
+const container = document.getElementById('container-id');
 const preloader = document.getElementById('preloader');
 const paragraphs = document.querySelectorAll('p');
 
 
 const enableInfiniteScroll = () => {
-
     const removeItem = (event) => {
         event.currentTarget.style.animationPlayState = 'running';
         event.currentTarget.addEventListener('animationend', event => {
